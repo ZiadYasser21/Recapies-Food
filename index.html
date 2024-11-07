@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@500&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="loading">
+      <span class="loader"></span>
+    </div>
+
+    <div class="container">
+      <div class="login-section">
+        <span class="icon-group mb-3">
+          <i class="fa-solid fa-pizza-slice fa-3x"></i>
+          <i class="fa-solid fa-carrot fa-3x"></i>
+          <i class="fa-solid fa-ice-cream fa-3x"></i>
+          <i class="fa-solid fa-burger fa-3x"></i>
+        </span>
+
+        <h2>sign up to create account</h2>
+        <button class="login-button mb-2">
+          <a href="signin.html">Sign Up</a>
+        </button>
+
+        <h2>sign in to your account</h2>
+        <button class="login-button mb-2">
+          <a href="signOut.html">Sign In</a>
+        </button>
+
+        <div class="next-button mt-2">
+          <button id="myButton" onclick="setLoading(this)" class="btn btn-dark">
+            <a href="./page2.html">Go To Recipes </a>
+          </button>
+        </div>
+      </div>
+
+      <div class="info-section">
+        <h1 class="header mb-5">Welcome</h1>
+
+        <h1>Recipes are here</h1>
+        <p class="text-white">
+          Here are all the recipes of the food you want in the world.
+        </p>
+
+        <div class="image-grid">
+          <img
+            src="./images/foodiesfeed.com_pizza-salami-on-a-wooden-table.jpg"
+            alt="Image 1"
+          />
+          <img src="./images/meal-1.jpg" alt="Image 2" />
+          <img src="./images/meal-4.jpg" alt="Image 3" />
+          <img src="./images/meal-3.jpg" alt="Image 4" />
+          <img src="./images/meal-7.jpg" alt="Image 5" />
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

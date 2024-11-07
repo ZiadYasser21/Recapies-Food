@@ -1,0 +1,294 @@
+body,
+html {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f7f9;
+  overflow: hidden;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Bitter", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 90vh;
+  background-color: #dbd6d6;
+  border-radius: 10px;
+}
+
+.header {
+  color: #dbd6d6;
+}
+/* Left Side (Login) */
+.login-section {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #2b3a42;
+}
+
+p {
+  margin: 10px;
+  color: #4a4a4a;
+}
+
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.login-button a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+
+.login-button:hover {
+  background-color: #143640;
+  color: #dbd6d6;
+}
+
+.icon-group i {
+  margin-right: 10px;
+  color: #143640;
+}
+
+/* Right Side (Info Section) */
+.info-section {
+  flex: 1;
+  padding: 50px;
+  background-color: #143640;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.info-section h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  font-family: "Edu AU VIC WA NT Hand", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.info-section p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  font-family: "Edu AU VIC WA NT Hand", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.image-grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.image-grid img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  padding: 5px;
+}
+
+/* buttons */
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #143640;
+  color: rgb(255, 247, 247);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #143640;
+}
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #143640;
+  color: rgb(255, 247, 247);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .login-section,
+  .info-section {
+    width: 45%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-section,
+  .info-section {
+    width: 80%;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-section,
+  .info-section {
+    width: 90%;
+  }
+}
+@media (max-width: 623px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-section,
+  .info-section {
+    width: 100%;
+  }
+}
+@media (max-width: 453px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .login-section,
+  .info-section {
+    width: 100%;
+  }
+}
+
+/* loading */
+
+.loader {
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  color: #fff;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  transform: rotateX(70deg);
+  animation: 1s spin linear infinite;
+}
+.loader:after {
+  color: #dbd6d6;
+  transform: rotateY(70deg);
+  animation-delay: 0.4s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: 0.2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: 0.2em 0.2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 0.2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -0.2em 0.2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -0.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -0.2em -0.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -0.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: 0.2em -0.2em 0 0 currentcolor;
+  }
+}
+
+.loading {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  background-color: #143640;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

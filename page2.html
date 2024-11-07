@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="stylePage.css">
+    <title>Recipes</title>
+</head>
+<body>
+  
+  <div class="loading">
+    <span class="loader"></span>
+  </div>
+
+  
+
+
+
+<!-- backToTop -->
+  <button id="backToTopBtn" onclick="backToTop()"> 
+       <i class="fa-solid fa-chevron-up"></i> 
+  </button>
+
+
+    <section class="home">
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark mb-3">
+            <div class="container">
+              <a class="navbar-brand" href="index.html">Eating</a>
+
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i id="settingsIcon" class="fa-solid fa-gear"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="#"> Forget Password</a>
+                      <li><a class="dropdown-item" href="#">Delete Account</a></li>
+                      <li><a class="dropdown-item" href="signOut.html"> <i class=""></i>SignOut</a></li>
+                      <li><a class="dropdown-item" href="#" id="toggleDarkMode"> Dark Mode</a>
+                      </a></li>
+ 
+                    </ul>
+
+
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page">pizza</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page">carrot</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page">ice cream</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page">hamburger</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page">pasta</a>
+                  </li>
+                  
+                
+              </div>
+            </div>
+          </nav>
+    </section>
+
+
+  
+    <br>
+  
+
+    <div class="side-nav-menu min-vh-100 position-fixed d-flex m-0">
+      <div class="nav-tab d-flex flex-column justify-content-between min-vh-100 p-4">
+          <div class="links">
+              <ul class="list-unstyled overflow-hidden">
+                  <li onclick="getCategories(); closeSideNav()" class="py-2 m-4 position-relative cursor-pointer"><a href="categories.html">Categories</a></li>
+                  <li onclick="getArea(); closeSideNav()" class="py-2 m-4 position-relative cursor-pointer"><a href="area.html">Area</a></li>
+                  <li onclick="getIngredients(); closeSideNav()" class="py-2 m-4 position-relative cursor-pointer"><a href="ingredients.html">Ingredients</a></li>
+                  <li onclick="showContacts(); closeSideNav()" class="py-2 m-4 position-relative cursor-pointer"><a href="contactUs.html">Connect Us</a></li>
+              </ul>
+          </div>
+          <div class="nav-footer">
+              <div class="icons">
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-twitter"></i>
+                  <i class="fa-solid fa-globe"></i>
+              </div>
+              <div class="footer">
+                  <p>Copyright Ziad© 2024 All Rights <br>Reserved.</p>
+              </div>
+          </div>
+      </div>
+      <div class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white">
+          <img class="logo" src="./images/chefs-1.jpg" alt="" srcset="">
+          <i class="fa-solid open-close-icon fa-align-justify fa-2x"></i>
+          <div>
+              <i class="fa-solid fa-globe d-block"></i>
+              <i class="fa-solid fa-share-nodes"></i>
+          </div>
+      </div>
+  </div>
+
+
+
+
+
+    <section class="container m-5 text-center ">
+    <h1>Recipes List</h1>
+
+  <div class="closDataRow row g-3 m-3" id="colsData"> 
+  </div>
+  </section>
+
+
+
+
+
+  <script src="./js/jquery-3.7.1.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+    
+</body>
+</html>
